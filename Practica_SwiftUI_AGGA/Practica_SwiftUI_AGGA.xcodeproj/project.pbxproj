@@ -7,66 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E4025472BD46E7600C5F28B /* Practica_SwiftUI_AGGAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025462BD46E7600C5F28B /* Practica_SwiftUI_AGGAApp.swift */; };
-		6E4025492BD46E7600C5F28B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025482BD46E7600C5F28B /* ContentView.swift */; };
-		6E40254B2BD46E7600C5F28B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40254A2BD46E7600C5F28B /* Item.swift */; };
-		6E40254D2BD46E7800C5F28B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E40254C2BD46E7800C5F28B /* Assets.xcassets */; };
-		6E4025512BD46E7800C5F28B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4025502BD46E7800C5F28B /* Preview Assets.xcassets */; };
-		6E40255B2BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40255A2BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.swift */; };
-		6E4025652BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025642BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.swift */; };
-		6E4025672BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025662BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift */; };
-		6E4025802BD471ED00C5F28B /* NetworkMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40257F2BD471ED00C5F28B /* NetworkMethods.swift */; };
+		6E40258E2BD50E8F00C5F28B /* Practica_SwiftUI_AGGAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40258D2BD50E8F00C5F28B /* Practica_SwiftUI_AGGAApp.swift */; };
+		6E4025902BD50E8F00C5F28B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40258F2BD50E8F00C5F28B /* ContentView.swift */; };
+		6E4025922BD50E9000C5F28B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4025912BD50E9000C5F28B /* Assets.xcassets */; };
+		6E4025962BD50E9000C5F28B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4025952BD50E9000C5F28B /* Preview Assets.xcassets */; };
+		6E4025A02BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40259F2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.swift */; };
+		6E4025AA2BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025A92BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.swift */; };
+		6E4025AC2BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025AB2BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift */; };
+		6E4025C72BD510ED00C5F28B /* APIStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025C62BD510ED00C5F28B /* APIStructs.swift */; };
+		6E4025C92BD5115800C5F28B /* SecureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025C82BD5115800C5F28B /* SecureData.swift */; };
+		6E4025CE2BD5126800C5F28B /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025CD2BD5126700C5F28B /* BaseNetwork.swift */; };
+		6E4025D02BD512C100C5F28B /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025CF2BD512C100C5F28B /* LoginNetwork.swift */; };
+		6E4025D22BD5138B00C5F28B /* MCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025D12BD5138B00C5F28B /* MCharacters.swift */; };
+		6E4025D62BD5323A00C5F28B /* CharacterNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025D52BD5323A00C5F28B /* CharacterNetwork.swift */; };
+		6E4025D82BD5331600C5F28B /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025D72BD5331600C5F28B /* LoginRepository.swift */; };
+		6E4025DA2BD533B200C5F28B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025D92BD533B200C5F28B /* Protocols.swift */; };
+		6E4025DC2BD534FE00C5F28B /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025DB2BD534FE00C5F28B /* CharacterRepository.swift */; };
+		6E4025E12BD57B6A00C5F28B /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E4025E02BD57B6A00C5F28B /* KeychainSwift */; };
+		6E4025E32BD57D6500C5F28B /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4025E22BD57D6500C5F28B /* CharacterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6E4025572BD46E7800C5F28B /* PBXContainerItemProxy */ = {
+		6E40259C2BD50E9100C5F28B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6E40253B2BD46E7600C5F28B /* Project object */;
+			containerPortal = 6E4025822BD50E8F00C5F28B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E4025422BD46E7600C5F28B;
+			remoteGlobalIDString = 6E4025892BD50E8F00C5F28B;
 			remoteInfo = Practica_SwiftUI_AGGA;
 		};
-		6E4025612BD46E7800C5F28B /* PBXContainerItemProxy */ = {
+		6E4025A62BD50E9100C5F28B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6E40253B2BD46E7600C5F28B /* Project object */;
+			containerPortal = 6E4025822BD50E8F00C5F28B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E4025422BD46E7600C5F28B;
+			remoteGlobalIDString = 6E4025892BD50E8F00C5F28B;
 			remoteInfo = Practica_SwiftUI_AGGA;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E4025432BD46E7600C5F28B /* Practica_SwiftUI_AGGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practica_SwiftUI_AGGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E4025462BD46E7600C5F28B /* Practica_SwiftUI_AGGAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGAApp.swift; sourceTree = "<group>"; };
-		6E4025482BD46E7600C5F28B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6E40254A2BD46E7600C5F28B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		6E40254C2BD46E7800C5F28B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E40254E2BD46E7800C5F28B /* Practica_SwiftUI_AGGA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Practica_SwiftUI_AGGA.entitlements; sourceTree = "<group>"; };
-		6E4025502BD46E7800C5F28B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6E4025562BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practica_SwiftUI_AGGATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E40255A2BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGATests.swift; sourceTree = "<group>"; };
-		6E4025602BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practica_SwiftUI_AGGAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E4025642BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGAUITests.swift; sourceTree = "<group>"; };
-		6E4025662BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGAUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6E40257F2BD471ED00C5F28B /* NetworkMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethods.swift; sourceTree = "<group>"; };
+		6E40258A2BD50E8F00C5F28B /* Practica_SwiftUI_AGGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practica_SwiftUI_AGGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E40258D2BD50E8F00C5F28B /* Practica_SwiftUI_AGGAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGAApp.swift; sourceTree = "<group>"; };
+		6E40258F2BD50E8F00C5F28B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6E4025912BD50E9000C5F28B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E4025932BD50E9000C5F28B /* Practica_SwiftUI_AGGA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Practica_SwiftUI_AGGA.entitlements; sourceTree = "<group>"; };
+		6E4025952BD50E9000C5F28B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6E40259B2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practica_SwiftUI_AGGATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E40259F2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGATests.swift; sourceTree = "<group>"; };
+		6E4025A52BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practica_SwiftUI_AGGAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4025A92BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGAUITests.swift; sourceTree = "<group>"; };
+		6E4025AB2BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_SwiftUI_AGGAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E4025C62BD510ED00C5F28B /* APIStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStructs.swift; sourceTree = "<group>"; };
+		6E4025C82BD5115800C5F28B /* SecureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureData.swift; sourceTree = "<group>"; };
+		6E4025CD2BD5126700C5F28B /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
+		6E4025CF2BD512C100C5F28B /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
+		6E4025D12BD5138B00C5F28B /* MCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCharacters.swift; sourceTree = "<group>"; };
+		6E4025D52BD5323A00C5F28B /* CharacterNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNetwork.swift; sourceTree = "<group>"; };
+		6E4025D72BD5331600C5F28B /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		6E4025D92BD533B200C5F28B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		6E4025DB2BD534FE00C5F28B /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
+		6E4025E22BD57D6500C5F28B /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6E4025402BD46E7600C5F28B /* Frameworks */ = {
+		6E4025872BD50E8F00C5F28B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E4025E12BD57B6A00C5F28B /* KeychainSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E4025982BD50E9100C5F28B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E4025532BD46E7800C5F28B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6E40255D2BD46E7800C5F28B /* Frameworks */ = {
+		6E4025A22BD50E9100C5F28B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,233 +94,260 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E40253A2BD46E7600C5F28B = {
+		6E4025812BD50E8F00C5F28B = {
 			isa = PBXGroup;
 			children = (
-				6E4025452BD46E7600C5F28B /* Practica_SwiftUI_AGGA */,
-				6E4025592BD46E7800C5F28B /* Practica_SwiftUI_AGGATests */,
-				6E4025632BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests */,
-				6E4025442BD46E7600C5F28B /* Products */,
+				6E40258C2BD50E8F00C5F28B /* Practica_SwiftUI_AGGA */,
+				6E40259E2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests */,
+				6E4025A82BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests */,
+				6E40258B2BD50E8F00C5F28B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6E4025442BD46E7600C5F28B /* Products */ = {
+		6E40258B2BD50E8F00C5F28B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E4025432BD46E7600C5F28B /* Practica_SwiftUI_AGGA.app */,
-				6E4025562BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.xctest */,
-				6E4025602BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.xctest */,
+				6E40258A2BD50E8F00C5F28B /* Practica_SwiftUI_AGGA.app */,
+				6E40259B2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.xctest */,
+				6E4025A52BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6E4025452BD46E7600C5F28B /* Practica_SwiftUI_AGGA */ = {
+		6E40258C2BD50E8F00C5F28B /* Practica_SwiftUI_AGGA */ = {
 			isa = PBXGroup;
 			children = (
-				6E40257C2BD4713100C5F28B /* Shared */,
-				6E4025732BD4708400C5F28B /* View */,
-				6E4025762BD470D200C5F28B /* Repository */,
-				6E4025782BD470E600C5F28B /* Data */,
+				6E40258D2BD50E8F00C5F28B /* Practica_SwiftUI_AGGAApp.swift */,
+				6E40258F2BD50E8F00C5F28B /* ContentView.swift */,
+				6E4025912BD50E9000C5F28B /* Assets.xcassets */,
+				6E4025932BD50E9000C5F28B /* Practica_SwiftUI_AGGA.entitlements */,
+				6E4025B92BD50F3A00C5F28B /* Presentation */,
+				6E4025BE2BD50FB400C5F28B /* Domain */,
+				6E4025BF2BD50FC700C5F28B /* Tools */,
+				6E4025C32BD5109800C5F28B /* Data */,
+				6E4025B82BD50F3300C5F28B /* Shared */,
+				6E4025942BD50E9000C5F28B /* Preview Content */,
 			);
 			path = Practica_SwiftUI_AGGA;
 			sourceTree = "<group>";
 		};
-		6E40254F2BD46E7800C5F28B /* Preview Content */ = {
+		6E4025942BD50E9000C5F28B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				6E4025502BD46E7800C5F28B /* Preview Assets.xcassets */,
+				6E4025952BD50E9000C5F28B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6E4025592BD46E7800C5F28B /* Practica_SwiftUI_AGGATests */ = {
+		6E40259E2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests */ = {
 			isa = PBXGroup;
 			children = (
-				6E40255A2BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.swift */,
+				6E40259F2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.swift */,
 			);
 			path = Practica_SwiftUI_AGGATests;
 			sourceTree = "<group>";
 		};
-		6E4025632BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests */ = {
+		6E4025A82BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6E4025642BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.swift */,
-				6E4025662BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift */,
+				6E4025A92BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.swift */,
+				6E4025AB2BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift */,
 			);
 			path = Practica_SwiftUI_AGGAUITests;
 			sourceTree = "<group>";
 		};
-		6E4025732BD4708400C5F28B /* View */ = {
+		6E4025B82BD50F3300C5F28B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				6E4025752BD470B800C5F28B /* Views */,
-				6E4025742BD470AB00C5F28B /* ViewModel */,
 			);
-			path = View;
+			path = Shared;
 			sourceTree = "<group>";
 		};
-		6E4025742BD470AB00C5F28B /* ViewModel */ = {
+		6E4025B92BD50F3A00C5F28B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				6E4025BB2BD50F5400C5F28B /* Views */,
+				6E4025BA2BD50F4D00C5F28B /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6E4025BA2BD50F4D00C5F28B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6E4025E22BD57D6500C5F28B /* CharacterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		6E4025752BD470B800C5F28B /* Views */ = {
+		6E4025BB2BD50F5400C5F28B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6E4025762BD470D200C5F28B /* Repository */ = {
+		6E4025BC2BD50F5F00C5F28B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				6E4025772BD470DB00C5F28B /* Protocol */,
+				6E4025D72BD5331600C5F28B /* LoginRepository.swift */,
+				6E4025DB2BD534FE00C5F28B /* CharacterRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		6E4025772BD470DB00C5F28B /* Protocol */ = {
+		6E4025BD2BD50F6D00C5F28B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				6E4025D92BD533B200C5F28B /* Protocols.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		6E4025782BD470E600C5F28B /* Data */ = {
+		6E4025BE2BD50FB400C5F28B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				6E40257D2BD471B700C5F28B /* Local */,
-				6E40257B2BD4711000C5F28B /* Repository */,
-				6E40257A2BD4710600C5F28B /* Network */,
+				6E4025C52BD510BC00C5F28B /* Models */,
+				6E4025BD2BD50F6D00C5F28B /* Protocol */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6E4025BF2BD50FC700C5F28B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6E4025C22BD50FFB00C5F28B /* Animation */,
+				6E4025C02BD50FD000C5F28B /* Extension */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6E4025C02BD50FD000C5F28B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6E4025C22BD50FFB00C5F28B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		6E4025C32BD5109800C5F28B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6E4025BC2BD50F5F00C5F28B /* Repository */,
+				6E4025C42BD510A800C5F28B /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		6E40257A2BD4710600C5F28B /* Network */ = {
+		6E4025C42BD510A800C5F28B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6E40257E2BD471D300C5F28B /* Endpoints */,
+				6E4025CF2BD512C100C5F28B /* LoginNetwork.swift */,
+				6E4025D52BD5323A00C5F28B /* CharacterNetwork.swift */,
+				6E4025C62BD510ED00C5F28B /* APIStructs.swift */,
+				6E4025C82BD5115800C5F28B /* SecureData.swift */,
+				6E4025CD2BD5126700C5F28B /* BaseNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		6E40257B2BD4711000C5F28B /* Repository */ = {
+		6E4025C52BD510BC00C5F28B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6E4025D12BD5138B00C5F28B /* MCharacters.swift */,
 			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		6E40257C2BD4713100C5F28B /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				6E4025462BD46E7600C5F28B /* Practica_SwiftUI_AGGAApp.swift */,
-				6E4025482BD46E7600C5F28B /* ContentView.swift */,
-				6E40254C2BD46E7800C5F28B /* Assets.xcassets */,
-				6E40254E2BD46E7800C5F28B /* Practica_SwiftUI_AGGA.entitlements */,
-				6E40254F2BD46E7800C5F28B /* Preview Content */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		6E40257D2BD471B700C5F28B /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				6E40254A2BD46E7600C5F28B /* Item.swift */,
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
-		6E40257E2BD471D300C5F28B /* Endpoints */ = {
-			isa = PBXGroup;
-			children = (
-				6E40257F2BD471ED00C5F28B /* NetworkMethods.swift */,
-			);
-			path = Endpoints;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E4025422BD46E7600C5F28B /* Practica_SwiftUI_AGGA */ = {
+		6E4025892BD50E8F00C5F28B /* Practica_SwiftUI_AGGA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E40256A2BD46E7800C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGA" */;
+			buildConfigurationList = 6E4025AF2BD50E9100C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGA" */;
 			buildPhases = (
-				6E40253F2BD46E7600C5F28B /* Sources */,
-				6E4025402BD46E7600C5F28B /* Frameworks */,
-				6E4025412BD46E7600C5F28B /* Resources */,
+				6E4025862BD50E8F00C5F28B /* Sources */,
+				6E4025872BD50E8F00C5F28B /* Frameworks */,
+				6E4025882BD50E8F00C5F28B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Practica_SwiftUI_AGGA;
+			packageProductDependencies = (
+				6E4025E02BD57B6A00C5F28B /* KeychainSwift */,
+			);
 			productName = Practica_SwiftUI_AGGA;
-			productReference = 6E4025432BD46E7600C5F28B /* Practica_SwiftUI_AGGA.app */;
+			productReference = 6E40258A2BD50E8F00C5F28B /* Practica_SwiftUI_AGGA.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6E4025552BD46E7800C5F28B /* Practica_SwiftUI_AGGATests */ = {
+		6E40259A2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E40256D2BD46E7800C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGATests" */;
+			buildConfigurationList = 6E4025B22BD50E9100C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGATests" */;
 			buildPhases = (
-				6E4025522BD46E7800C5F28B /* Sources */,
-				6E4025532BD46E7800C5F28B /* Frameworks */,
-				6E4025542BD46E7800C5F28B /* Resources */,
+				6E4025972BD50E9100C5F28B /* Sources */,
+				6E4025982BD50E9100C5F28B /* Frameworks */,
+				6E4025992BD50E9100C5F28B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E4025582BD46E7800C5F28B /* PBXTargetDependency */,
+				6E40259D2BD50E9100C5F28B /* PBXTargetDependency */,
 			);
 			name = Practica_SwiftUI_AGGATests;
 			productName = Practica_SwiftUI_AGGATests;
-			productReference = 6E4025562BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.xctest */;
+			productReference = 6E40259B2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6E40255F2BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests */ = {
+		6E4025A42BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E4025702BD46E7800C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGAUITests" */;
+			buildConfigurationList = 6E4025B52BD50E9100C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGAUITests" */;
 			buildPhases = (
-				6E40255C2BD46E7800C5F28B /* Sources */,
-				6E40255D2BD46E7800C5F28B /* Frameworks */,
-				6E40255E2BD46E7800C5F28B /* Resources */,
+				6E4025A12BD50E9100C5F28B /* Sources */,
+				6E4025A22BD50E9100C5F28B /* Frameworks */,
+				6E4025A32BD50E9100C5F28B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E4025622BD46E7800C5F28B /* PBXTargetDependency */,
+				6E4025A72BD50E9100C5F28B /* PBXTargetDependency */,
 			);
 			name = Practica_SwiftUI_AGGAUITests;
 			productName = Practica_SwiftUI_AGGAUITests;
-			productReference = 6E4025602BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.xctest */;
+			productReference = 6E4025A52BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6E40253B2BD46E7600C5F28B /* Project object */ = {
+		6E4025822BD50E8F00C5F28B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					6E4025422BD46E7600C5F28B = {
+					6E4025892BD50E8F00C5F28B = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					6E4025552BD46E7800C5F28B = {
+					6E40259A2BD50E9100C5F28B = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 6E4025422BD46E7600C5F28B;
+						TestTargetID = 6E4025892BD50E8F00C5F28B;
 					};
-					6E40255F2BD46E7800C5F28B = {
+					6E4025A42BD50E9100C5F28B = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 6E4025422BD46E7600C5F28B;
+						TestTargetID = 6E4025892BD50E8F00C5F28B;
 					};
 				};
 			};
-			buildConfigurationList = 6E40253E2BD46E7600C5F28B /* Build configuration list for PBXProject "Practica_SwiftUI_AGGA" */;
+			buildConfigurationList = 6E4025852BD50E8F00C5F28B /* Build configuration list for PBXProject "Practica_SwiftUI_AGGA" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -310,36 +355,39 @@
 				en,
 				Base,
 			);
-			mainGroup = 6E40253A2BD46E7600C5F28B;
-			productRefGroup = 6E4025442BD46E7600C5F28B /* Products */;
+			mainGroup = 6E4025812BD50E8F00C5F28B;
+			packageReferences = (
+				6E4025DF2BD57B6A00C5F28B /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
+			productRefGroup = 6E40258B2BD50E8F00C5F28B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E4025422BD46E7600C5F28B /* Practica_SwiftUI_AGGA */,
-				6E4025552BD46E7800C5F28B /* Practica_SwiftUI_AGGATests */,
-				6E40255F2BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests */,
+				6E4025892BD50E8F00C5F28B /* Practica_SwiftUI_AGGA */,
+				6E40259A2BD50E9100C5F28B /* Practica_SwiftUI_AGGATests */,
+				6E4025A42BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6E4025412BD46E7600C5F28B /* Resources */ = {
+		6E4025882BD50E8F00C5F28B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4025512BD46E7800C5F28B /* Preview Assets.xcassets in Resources */,
-				6E40254D2BD46E7800C5F28B /* Assets.xcassets in Resources */,
+				6E4025962BD50E9000C5F28B /* Preview Assets.xcassets in Resources */,
+				6E4025922BD50E9000C5F28B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E4025542BD46E7800C5F28B /* Resources */ = {
+		6E4025992BD50E9100C5F28B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E40255E2BD46E7800C5F28B /* Resources */ = {
+		6E4025A32BD50E9100C5F28B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,51 +397,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6E40253F2BD46E7600C5F28B /* Sources */ = {
+		6E4025862BD50E8F00C5F28B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4025492BD46E7600C5F28B /* ContentView.swift in Sources */,
-				6E4025802BD471ED00C5F28B /* NetworkMethods.swift in Sources */,
-				6E40254B2BD46E7600C5F28B /* Item.swift in Sources */,
-				6E4025472BD46E7600C5F28B /* Practica_SwiftUI_AGGAApp.swift in Sources */,
+				6E4025D62BD5323A00C5F28B /* CharacterNetwork.swift in Sources */,
+				6E4025C92BD5115800C5F28B /* SecureData.swift in Sources */,
+				6E4025902BD50E8F00C5F28B /* ContentView.swift in Sources */,
+				6E40258E2BD50E8F00C5F28B /* Practica_SwiftUI_AGGAApp.swift in Sources */,
+				6E4025E32BD57D6500C5F28B /* CharacterViewModel.swift in Sources */,
+				6E4025D22BD5138B00C5F28B /* MCharacters.swift in Sources */,
+				6E4025DC2BD534FE00C5F28B /* CharacterRepository.swift in Sources */,
+				6E4025DA2BD533B200C5F28B /* Protocols.swift in Sources */,
+				6E4025C72BD510ED00C5F28B /* APIStructs.swift in Sources */,
+				6E4025CE2BD5126800C5F28B /* BaseNetwork.swift in Sources */,
+				6E4025D02BD512C100C5F28B /* LoginNetwork.swift in Sources */,
+				6E4025D82BD5331600C5F28B /* LoginRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E4025522BD46E7800C5F28B /* Sources */ = {
+		6E4025972BD50E9100C5F28B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E40255B2BD46E7800C5F28B /* Practica_SwiftUI_AGGATests.swift in Sources */,
+				6E4025A02BD50E9100C5F28B /* Practica_SwiftUI_AGGATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E40255C2BD46E7800C5F28B /* Sources */ = {
+		6E4025A12BD50E9100C5F28B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4025652BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITests.swift in Sources */,
-				6E4025672BD46E7800C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift in Sources */,
+				6E4025AA2BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITests.swift in Sources */,
+				6E4025AC2BD50E9100C5F28B /* Practica_SwiftUI_AGGAUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E4025582BD46E7800C5F28B /* PBXTargetDependency */ = {
+		6E40259D2BD50E9100C5F28B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E4025422BD46E7600C5F28B /* Practica_SwiftUI_AGGA */;
-			targetProxy = 6E4025572BD46E7800C5F28B /* PBXContainerItemProxy */;
+			target = 6E4025892BD50E8F00C5F28B /* Practica_SwiftUI_AGGA */;
+			targetProxy = 6E40259C2BD50E9100C5F28B /* PBXContainerItemProxy */;
 		};
-		6E4025622BD46E7800C5F28B /* PBXTargetDependency */ = {
+		6E4025A72BD50E9100C5F28B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E4025422BD46E7600C5F28B /* Practica_SwiftUI_AGGA */;
-			targetProxy = 6E4025612BD46E7800C5F28B /* PBXContainerItemProxy */;
+			target = 6E4025892BD50E8F00C5F28B /* Practica_SwiftUI_AGGA */;
+			targetProxy = 6E4025A62BD50E9100C5F28B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		6E4025682BD46E7800C5F28B /* Debug */ = {
+		6E4025AD2BD50E9100C5F28B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -454,7 +510,7 @@
 			};
 			name = Debug;
 		};
-		6E4025692BD46E7800C5F28B /* Release */ = {
+		6E4025AE2BD50E9100C5F28B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -507,7 +563,7 @@
 			};
 			name = Release;
 		};
-		6E40256B2BD46E7800C5F28B /* Debug */ = {
+		6E4025B02BD50E9100C5F28B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -533,7 +589,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.agavgar.Practica-SwiftUI-AGGA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,7 +601,7 @@
 			};
 			name = Debug;
 		};
-		6E40256C2BD46E7800C5F28B /* Release */ = {
+		6E4025B12BD50E9100C5F28B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -571,7 +627,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.agavgar.Practica-SwiftUI-AGGA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -583,7 +639,7 @@
 			};
 			name = Release;
 		};
-		6E40256E2BD46E7800C5F28B /* Debug */ = {
+		6E4025B32BD50E9100C5F28B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -606,7 +662,7 @@
 			};
 			name = Debug;
 		};
-		6E40256F2BD46E7800C5F28B /* Release */ = {
+		6E4025B42BD50E9100C5F28B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -629,7 +685,7 @@
 			};
 			name = Release;
 		};
-		6E4025712BD46E7800C5F28B /* Debug */ = {
+		6E4025B62BD50E9100C5F28B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -651,7 +707,7 @@
 			};
 			name = Debug;
 		};
-		6E4025722BD46E7800C5F28B /* Release */ = {
+		6E4025B72BD50E9100C5F28B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -676,43 +732,62 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E40253E2BD46E7600C5F28B /* Build configuration list for PBXProject "Practica_SwiftUI_AGGA" */ = {
+		6E4025852BD50E8F00C5F28B /* Build configuration list for PBXProject "Practica_SwiftUI_AGGA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E4025682BD46E7800C5F28B /* Debug */,
-				6E4025692BD46E7800C5F28B /* Release */,
+				6E4025AD2BD50E9100C5F28B /* Debug */,
+				6E4025AE2BD50E9100C5F28B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E40256A2BD46E7800C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGA" */ = {
+		6E4025AF2BD50E9100C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E40256B2BD46E7800C5F28B /* Debug */,
-				6E40256C2BD46E7800C5F28B /* Release */,
+				6E4025B02BD50E9100C5F28B /* Debug */,
+				6E4025B12BD50E9100C5F28B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E40256D2BD46E7800C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGATests" */ = {
+		6E4025B22BD50E9100C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGATests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E40256E2BD46E7800C5F28B /* Debug */,
-				6E40256F2BD46E7800C5F28B /* Release */,
+				6E4025B32BD50E9100C5F28B /* Debug */,
+				6E4025B42BD50E9100C5F28B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E4025702BD46E7800C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGAUITests" */ = {
+		6E4025B52BD50E9100C5F28B /* Build configuration list for PBXNativeTarget "Practica_SwiftUI_AGGAUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E4025712BD46E7800C5F28B /* Debug */,
-				6E4025722BD46E7800C5F28B /* Release */,
+				6E4025B62BD50E9100C5F28B /* Debug */,
+				6E4025B72BD50E9100C5F28B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E4025DF2BD57B6A00C5F28B /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 22.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E4025E02BD57B6A00C5F28B /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E4025DF2BD57B6A00C5F28B /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 6E40253B2BD46E7600C5F28B /* Project object */;
+	rootObject = 6E4025822BD50E8F00C5F28B /* Project object */;
 }
