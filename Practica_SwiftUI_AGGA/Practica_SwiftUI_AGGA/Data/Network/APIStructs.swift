@@ -16,20 +16,13 @@ enum NetworkErrors: Error {
     case unknown
 }
 
-enum EndpointsKC: String{
-    case url = "https://dragonball.keepcoding.education/api"
-    case login = "/auth/login"
-}
-
 enum EndpointsMarvel: String {
-    case url = "https://gateway.marvel.com/"
-    case characters = "v1/public/characters"
-    case publicKey = "17bf6269b1c110b54464c4975cd7846b"
-    case privateKey = "07b5d02faf41c1fb96db440fe4689b07f82f4d47"
-    //case comics = "/v1/public/comics"
-    case timestamp = "?ts="
-    case apiKey = "?apikey="
-    case hash = "&hash="
+    case url = "https://gateway.marvel.com"
+    case characters = "/v1/public/characters"
+    case EndSerie = "/series"
+    case apiKey = "?apikey=17bf6269b1c110b54464c4975cd7846b"
+    case timestamp = "&ts=7"
+    case hash = "&hash=ecbf164af55a73b4bbf6559943f231db"
 }
 
 struct HTTPResponseCodes{
@@ -41,14 +34,5 @@ struct HTTPResponseCodes{
     static let FORBIDDEN = 403
 }
 struct HTTPMethods {
-    static let post = "POST"
     static let get = "GET"
-    static let put = "PUT"
-    static let delete = "DELETE"
-    static let application = "application/json"
-    static let content = "Content-type"
-    static let auth = "Authorization"
-    static let apikey = "Apikey"
-    static let timestamp = "ts"
-    static let hash = "hash"
 }

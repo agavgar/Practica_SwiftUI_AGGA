@@ -8,7 +8,7 @@
 import Foundation
 
 final class CharacterRepository: CharacterRepositoryProtocol {
-    
+
     private var network: CharacterNetworkProtocol
     
     init(Network: CharacterNetworkProtocol = CharacterNetwork()) {
@@ -18,6 +18,11 @@ final class CharacterRepository: CharacterRepositoryProtocol {
     func getCharacters() async -> [Character]? {
         return await network.getCharacters()
     }
+    
+    func getSeries(id: String) async -> [Series]? {
+        return await network.getSeries(id: id)
+    }
+    
 
 }
 
@@ -31,6 +36,10 @@ final class CharacterRepositoryFake: CharacterRepositoryProtocol {
     
     func getCharacters() async -> [Character]? {
         return await network.getCharacters()
+    }
+    
+    func getSeries(id: String) async -> [Series]? {
+        return await network.getSeries(id: id)
     }
 
 }

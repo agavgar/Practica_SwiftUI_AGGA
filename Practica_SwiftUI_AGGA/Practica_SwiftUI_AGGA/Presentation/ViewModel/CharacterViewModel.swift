@@ -11,10 +11,14 @@ import SwiftUI
 protocol CharacterViewModelProtocol {
     var repo: CharacterRepositoryProtocol { get set }
     func getCharacter() async
+    func getSeries(id: String) async
 }
 
 final class CharacterViewModel: CharacterViewModelProtocol {
+    
     @State var characters = [Character]()
+    @State var series = [Series]()
+    
     var repo: CharacterRepositoryProtocol
     
     init(repo: CharacterRepositoryProtocol = CharacterRepository(Network: CharacterNetwork())) {
@@ -31,5 +35,16 @@ final class CharacterViewModel: CharacterViewModelProtocol {
         }
         
     }
+    
+    func getSeries(id: String) async {
+        let data = await repo.getSeries(id: id)
+        
+        if data != nil{
+            DispatchQueue.main.async {
+                self.series = data!
+            }
+        }
+    }
+    
     
 }

@@ -7,10 +7,7 @@
 
 import Foundation
 
-protocol LoginRepositoryProtocol{
-    func login(user: String, password: String) async -> Void
-}
-
 protocol CharacterRepositoryProtocol{
     func getCharacters() async -> [Character]?
+    func getSeries(id:String) async -> [Series]?
 }
