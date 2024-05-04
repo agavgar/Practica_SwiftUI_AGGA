@@ -11,6 +11,32 @@ struct CharacterCellView: View {
     let character: Character
     
     var body: some View {
+        #if os(watchOS)
+            ZStack{
+                AsyncImage(url: URL(string: "\(character.thumbnail?.path)\(character.thumbnail?.thumbnailExtension)")) { image in
+                    image.resizable()
+                        .scaledToFill()
+                        .frame(width: 150,height: 300)
+                        
+                } placeholder: {
+                    Image("Placeholder")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150,height: 300)
+                }
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 300, height: 50)
+                    .offset(y:100)
+                Text(character.name!)
+                    .font(.title3)
+                    .foregroundStyle(.white)
+                    .backgroundStyle(.clear)
+                    .bold()
+                    .frame(width: 500, height: 25)
+                    .offset(y:90)
+            }
+        #else
         Spacer()
         VStack{
             AsyncImage(url: URL(string: "\(character.thumbnail?.path)\(character.thumbnail?.thumbnailExtension)")) { image in
@@ -26,14 +52,8 @@ struct CharacterCellView: View {
                     .frame(width: 350, height: 250)
             }
             ZStack{
-                #if os(watchOS)
-                Rectangle()
-                    .frame(width: 500, height: 25)
-                    .background(.black.opacity(0.5))
-                #else
                 BlurView(style: .dark)
                     .frame(width: 500, height: 25)
-                #endif
                 Text(character.name!)
                     .font(.title3)
                     .foregroundStyle(.red)
@@ -41,9 +61,7 @@ struct CharacterCellView: View {
             }
             .offset(y:12)
         }
-        //.background(Color.red)
-        //.border(Color.white, width: 3)
-        //.frame(width: 350, height: 250)
+        #endif
     }
 }
 

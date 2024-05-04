@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct Home: View {
-    private var characters: [Character] = getTestData()
-    //private var viewModel: CharacterViewModelProtocol
+    var characters: [Character] = getTestData()
+    //@EnvironmentObject var viewModel: CharacterViewModel
     
     var body: some View {
+        #if os(watchOS)
+        NavigationStack {
+            List{
+                ForEach(characters) { character in
+                    NavigationLink {
+                        //Añadir la vista detalle
+                        DetailView(character: character)
+                    } label: {
+                        CharacterCellView(character: character)
+                            .frame(width: 175, height: 175)
+                    }
+                }
+            }
+        }
+        #else
         NavigationStack {
             List{
                 ForEach(characters) { character in
@@ -34,6 +49,7 @@ struct Home: View {
             }
             .navigationBarTitleDisplayMode(.automatic)
         }
+        #endif
     }
 }
 

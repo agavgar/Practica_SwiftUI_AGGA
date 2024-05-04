@@ -21,8 +21,9 @@ struct BlurView: UIViewRepresentable {
         uiView.effect = UIBlurEffect(style: style)
     }
 }
-#endif
+
 
 #Preview {
     BlurView(style: .extraLight)
 }
+#endif

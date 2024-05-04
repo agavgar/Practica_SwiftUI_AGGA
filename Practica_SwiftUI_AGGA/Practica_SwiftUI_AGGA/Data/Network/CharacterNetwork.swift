@@ -10,7 +10,7 @@ import CryptoKit
 
 protocol CharacterNetworkProtocol{
     func getCharacters() async -> [Character]?
-    func getSeries(id: String) async -> [Series]?
+    func getSeries(id: Int) async -> [Series]?
 }
 
 final class CharacterNetwork: CharacterNetworkProtocol {
@@ -40,7 +40,7 @@ final class CharacterNetwork: CharacterNetworkProtocol {
         return character
     }
     
-    func getSeries(id: String) async -> [Series]? {
+    func getSeries(id: Int) async -> [Series]? {
         var series = [Series]()
         let url = URL(string: "\(EndpointsMarvel.url.rawValue)\(EndpointsMarvel.characters.rawValue)\( id)\(EndpointsMarvel.EndSerie.rawValue)\(EndpointsMarvel.apiKey.rawValue)\(EndpointsMarvel.timestamp.rawValue)\(EndpointsMarvel.hash.rawValue)")
         
@@ -75,7 +75,7 @@ final class CharacterNetworkFake: CharacterNetworkProtocol{
         return []
     }
     
-    func getSeries(id: String) -> [Series]? {
+    func getSeries(id: Int) -> [Series]? {
         return []
     }
     

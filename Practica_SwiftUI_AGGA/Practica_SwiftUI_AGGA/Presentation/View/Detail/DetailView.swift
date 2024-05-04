@@ -10,11 +10,59 @@ import SwiftUI
 struct DetailView: View {
     let character: Character
     var series: [Series] = getTestData()
-
+    
     var body: some View {
         NavigationStack {
+        #if os(watchOS)
+            ZStack{
+                    AsyncImage(url: URL(string: "\(character.thumbnail?.path)\(character.thumbnail?.thumbnailExtension)")) { image in
+                        image.resizable()
+                            .scaledToFill()
+                    } placeholder: {
+                        Image("Placeholder")
+                            .resizable()
+                            .scaledToFill()
+                    }
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack(spacing: 20) {
+                        ForEach(series) { serie in
+                            NavigationLink {
+                                //Añadir la vista detalle
+                                SeriesDetailView(serie: serie)
+                            } label: {
+                                AsyncImage(url: URL(string: "\(serie.thumbnail?.path)\(serie.thumbnail?.thumbnailExtension)")) { image in
+                                    image.resizable()
+                                        .scaledToFill()
+                                } placeholder: {
+                                    Image("Placeholder")
+                                        .resizable()
+                                        .scaledToFill()
+                                }
+                            }
+                        }
+                    }
+                }
+                .frame(height: 75)
+                .offset(y:60)
+            }
+        #else
             VStack{
                 ZStack{
+                    AsyncImage(url: URL(string: "\(character.thumbnail?.path)\(character.thumbnail?.thumbnailExtension)")) { image in
+                        image.resizable()
+                            .scaledToFill()
+                    } placeholder: {
+                        Image("Placeholder")
+                            .resizable()
+                            .scaledToFill()
+                    }
+                    .frame(height: 100)
+                    Rectangle()
+                        .foregroundColor(.red.opacity(0.55))
+                        .frame(height: 100)
+                        .offset(y: 170)
+                    
                     AsyncImage(url: URL(string: "\(character.thumbnail?.path)\(character.thumbnail?.thumbnailExtension)")) { image in
                         image.resizable()
                             .scaledToFill()
@@ -66,6 +114,7 @@ struct DetailView: View {
                 }
                 .frame(height: 100)
             }
+            
             .navigationTitle("\(character.name)")
             .toolbar {
                 ToolbarItem(placement: .principal) {
@@ -76,6 +125,7 @@ struct DetailView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.automatic)
+        #endif
         }
     }
 }

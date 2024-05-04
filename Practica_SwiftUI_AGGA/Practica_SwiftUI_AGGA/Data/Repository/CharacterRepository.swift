@@ -19,7 +19,7 @@ final class CharacterRepository: CharacterRepositoryProtocol {
         return await network.getCharacters()
     }
     
-    func getSeries(id: String) async -> [Series]? {
+    func getSeries(id: Int) async -> [Series]? {
         return await network.getSeries(id: id)
     }
     
@@ -38,7 +38,7 @@ final class CharacterRepositoryFake: CharacterRepositoryProtocol {
         return await network.getCharacters()
     }
     
-    func getSeries(id: String) async -> [Series]? {
+    func getSeries(id: Int) async -> [Series]? {
         return await network.getSeries(id: id)
     }
 

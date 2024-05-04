@@ -9,5 +9,5 @@ import Foundation
 
 protocol CharacterRepositoryProtocol{
     func getCharacters() async -> [Character]?
-    func getSeries(id:String) async -> [Series]?
+    func getSeries(id:Int) async -> [Series]?
 }

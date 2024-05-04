@@ -11,7 +11,7 @@ import SwiftUI
 protocol CharacterViewModelProtocol {
     var repo: CharacterRepositoryProtocol { get set }
     func getCharacter() async
-    func getSeries(id: String) async
+    func getSeries(id: Int) async
 }
 
 final class CharacterViewModel: CharacterViewModelProtocol {
@@ -21,8 +21,9 @@ final class CharacterViewModel: CharacterViewModelProtocol {
     
     var repo: CharacterRepositoryProtocol
     
-    init(repo: CharacterRepositoryProtocol = CharacterRepository(Network: CharacterNetwork())) {
+    init(repo: CharacterRepositoryProtocol = CharacterRepository(Network: CharacterNetwork())) async {
         self.repo = repo
+        await getCharacter()
     }
     
     func getCharacter() async {
@@ -36,7 +37,7 @@ final class CharacterViewModel: CharacterViewModelProtocol {
         
     }
     
-    func getSeries(id: String) async {
+    func getSeries(id: Int) async {
         let data = await repo.getSeries(id: id)
         
         if data != nil{
@@ -48,3 +49,5 @@ final class CharacterViewModel: CharacterViewModelProtocol {
     
     
 }
+
+extension CharacterViewModel: ObservableObject {}
