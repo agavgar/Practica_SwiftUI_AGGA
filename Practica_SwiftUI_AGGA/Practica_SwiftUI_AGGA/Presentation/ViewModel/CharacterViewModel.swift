@@ -7,23 +7,26 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 protocol CharacterViewModelProtocol {
     var repo: CharacterRepositoryProtocol { get set }
     func getCharacter() async
     func getSeries(id: Int) async
+    func loadCharacters()
+    func loadSeries(id: Int)
 }
 
 final class CharacterViewModel: CharacterViewModelProtocol {
     
-    @State var characters = [Character]()
-    @State var series = [Series]()
+    @Published var characters = [Character]()
+    @Published var series = [Series]()
     
     var repo: CharacterRepositoryProtocol
     
-    init(repo: CharacterRepositoryProtocol = CharacterRepository(Network: CharacterNetwork())) async {
+    init(repo: CharacterRepositoryProtocol = CharacterRepository(Network: CharacterNetwork())) {
         self.repo = repo
-        await getCharacter()
+        loadCharacters()
     }
     
     func getCharacter() async {
@@ -37,6 +40,12 @@ final class CharacterViewModel: CharacterViewModelProtocol {
         
     }
     
+    func loadCharacters(){
+        Task{
+            await getCharacter()
+        }
+    }
+    
     func getSeries(id: Int) async {
         let data = await repo.getSeries(id: id)
         
@@ -44,6 +53,12 @@ final class CharacterViewModel: CharacterViewModelProtocol {
             DispatchQueue.main.async {
                 self.series = data!
             }
+        }
+    }
+    
+    func loadSeries(id: Int) {
+        Task{
+            await getSeries(id:id)
         }
     }
     

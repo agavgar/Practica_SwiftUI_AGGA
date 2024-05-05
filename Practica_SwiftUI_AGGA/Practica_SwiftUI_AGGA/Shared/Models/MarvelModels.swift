@@ -20,15 +20,14 @@ struct CharacterDataContainer: Codable {
 
 // MARK: - Characters
 struct Character: Codable, Identifiable {
-    let id: Int?
-    let name, description: String?
-    let thumbnail: Thumbnail?
+    let id: Int
+    let name, description: String
+    let thumbnail: Thumbnail
 }
 
 // MARK: - Thumbnail
 struct Thumbnail: Codable {
-    let path: String?
-    let thumbnailExtension: String?
+    let path: String
 }
 
 //MARK: - SeriesDataWrapper
@@ -42,9 +41,9 @@ struct SeriesDataContainer: Codable {
 
 //MARK: - Series
 struct Series: Codable, Identifiable {
-    let id: Int?
-    let name, description: String?
-    let thumbnail: Thumbnail?
+    let id: Int
+    let name, description: String
+    let thumbnail: Thumbnail
 }
 
 

@@ -13,7 +13,7 @@ struct SeriesDetailView: View {
     var body: some View {
     #if os(watchOS)
     ZStack{
-        AsyncImage(url: URL(string: "\(serie.thumbnail?.path)\(serie.thumbnail?.thumbnailExtension)")) { image in
+        AsyncImage(url: URL(string: "\(serie.thumbnail.path)")) { image in
             image.resizable()
                 .scaledToFill()
                 .frame(width: 150,height: 300)
@@ -28,7 +28,7 @@ struct SeriesDetailView: View {
             .fill(Color.red)
             .frame(width: 300, height: 50)
             .offset(y:100)
-        Text(serie.name!)
+        Text(serie.name)
             .font(.caption2)
             .foregroundStyle(.white)
             .backgroundStyle(.clear)
@@ -39,7 +39,7 @@ struct SeriesDetailView: View {
     #else
         NavigationStack {
             ZStack{
-                AsyncImage(url: URL(string: "\(serie.thumbnail?.path)\(serie.thumbnail?.thumbnailExtension)")) { image in
+                AsyncImage(url: URL(string: "\(serie.thumbnail.path)")) { image in
                     image.resizable()
                         .scaledToFill()
                 } placeholder: {
@@ -57,7 +57,7 @@ struct SeriesDetailView: View {
                     .offset(y: 300)
                 
                 ScrollView(.vertical, showsIndicators: false){
-                    Text(serie.description!)
+                    Text(serie.description)
                         .font(.body)
                         .foregroundStyle(.white)
                         .padding()
@@ -82,5 +82,5 @@ struct SeriesDetailView: View {
 }
 
 #Preview {
-    SeriesDetailView(serie: Series(id: 1, name: "Spider-Verse Chronicles", description: "Explore the multiple dimensions of the Spider-Verse, where different versions of Spider-Men and Spider-Women battle against unique villains.", thumbnail: Thumbnail(path: "https://example.com/spiderverse", thumbnailExtension: "jpg")))
+    SeriesDetailView(serie: Series(id: 1, name: "Spider-Verse Chronicles", description: "Explore the multiple dimensions of the Spider-Verse, where different versions of Spider-Men and Spider-Women battle against unique villains.", thumbnail: Thumbnail(path: "https://example.com/spiderverse")))
 }

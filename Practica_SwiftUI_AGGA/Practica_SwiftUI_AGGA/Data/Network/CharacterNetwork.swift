@@ -21,6 +21,7 @@ final class CharacterNetwork: CharacterNetworkProtocol {
         
         var request: URLRequest = URLRequest(url: url!)
         request.httpMethod = HTTPMethods.get
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: HTTPMethods.type)
         
         do{
             let (data, response) = try await URLSession.shared.data(for: request)
@@ -42,10 +43,11 @@ final class CharacterNetwork: CharacterNetworkProtocol {
     
     func getSeries(id: Int) async -> [Series]? {
         var series = [Series]()
-        let url = URL(string: "\(EndpointsMarvel.url.rawValue)\(EndpointsMarvel.characters.rawValue)\( id)\(EndpointsMarvel.EndSerie.rawValue)\(EndpointsMarvel.apiKey.rawValue)\(EndpointsMarvel.timestamp.rawValue)\(EndpointsMarvel.hash.rawValue)")
+        let url = URL(string: "\(EndpointsMarvel.url.rawValue)\(EndpointsMarvel.characters.rawValue)/\( id)\(EndpointsMarvel.EndSerie.rawValue)\(EndpointsMarvel.apiKey.rawValue)\(EndpointsMarvel.timestamp.rawValue)\(EndpointsMarvel.hash.rawValue)")
         
         var request: URLRequest = URLRequest(url: url!)
         request.httpMethod = HTTPMethods.get
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: HTTPMethods.type)
         
         do{
             let (data, response) = try await URLSession.shared.data(for: request)

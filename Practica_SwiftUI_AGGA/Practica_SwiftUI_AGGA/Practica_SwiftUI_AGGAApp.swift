@@ -12,6 +12,7 @@ struct Practica_SwiftUI_AGGAApp: App {
     var body: some Scene {
         WindowGroup {
             Home()
+                .environmentObject(CharacterViewModel())
         }
     }
 }
