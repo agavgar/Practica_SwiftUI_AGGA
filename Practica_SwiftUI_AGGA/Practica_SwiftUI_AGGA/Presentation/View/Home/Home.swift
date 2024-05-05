@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Home: View {
-    //var characters: [Character] = getTestData()
     @EnvironmentObject var viewModel: CharacterViewModel
     
     var body: some View {
@@ -37,6 +36,9 @@ struct Home: View {
                         CharacterCellView(character: character)
                     }
                 }
+            }
+            .onAppear{
+                viewModel.loadCharacters()
             }
             .navigationTitle("Characters")
             .toolbar {

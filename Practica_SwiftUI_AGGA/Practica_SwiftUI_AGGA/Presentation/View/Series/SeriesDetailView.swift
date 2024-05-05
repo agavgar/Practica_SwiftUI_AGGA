@@ -11,6 +11,7 @@ struct SeriesDetailView: View {
     let serie: Series
     
     var body: some View {
+        NavigationStack {
     #if os(watchOS)
     ZStack{
         AsyncImage(url: URL(string: "\(serie.thumbnail.path)")) { image in
@@ -28,7 +29,7 @@ struct SeriesDetailView: View {
             .fill(Color.red)
             .frame(width: 300, height: 50)
             .offset(y:100)
-        Text(serie.name)
+        Text(serie.title)
             .font(.caption2)
             .foregroundStyle(.white)
             .backgroundStyle(.clear)
@@ -36,8 +37,8 @@ struct SeriesDetailView: View {
             .frame(width: 500, height: 25)
             .offset(y:90)
     }
+            
     #else
-        NavigationStack {
             ZStack{
                 AsyncImage(url: URL(string: "\(serie.thumbnail.path)")) { image in
                     image.resizable()
@@ -47,40 +48,22 @@ struct SeriesDetailView: View {
                         .resizable()
                         .scaledToFill()
                 }
-    
-                BlurView(style: .dark)
-                    .frame(height: UIScreen.main.bounds.height * 0.25)
-                    .offset(y: 300)
-                Rectangle()
-                    .foregroundColor(.red.opacity(0.55))
-                    .frame(height: UIScreen.main.bounds.height * 0.25)
-                    .offset(y: 300)
-                
-                ScrollView(.vertical, showsIndicators: false){
-                    Text(serie.description)
-                        .font(.body)
-                        .foregroundStyle(.white)
-                        .padding()
-                        .frame(width: 400)
-                }
-                .frame(height: UIScreen.main.bounds.height * 0.25)
-                .offset(y: 300)
-            }
-            .navigationTitle("\(serie.name)")
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Image("Logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 35)
+                .navigationTitle("\(serie.title)")
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Image("Logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 35)
+                    }
                 }
             }
             .navigationBarTitleDisplayMode(.automatic)
-        }
         #endif
+        }
     }
 }
 
 #Preview {
-    SeriesDetailView(serie: Series(id: 1, name: "Spider-Verse Chronicles", description: "Explore the multiple dimensions of the Spider-Verse, where different versions of Spider-Men and Spider-Women battle against unique villains.", thumbnail: Thumbnail(path: "https://example.com/spiderverse")))
+    SeriesDetailView(serie: Series(id: 1, title: "Spider-Verse Chronicles",  thumbnail: Thumbnail(path: "https://example.com/spiderverse")))
 }

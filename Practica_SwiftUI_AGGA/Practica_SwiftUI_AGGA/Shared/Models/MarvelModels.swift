@@ -42,7 +42,7 @@ struct SeriesDataContainer: Codable {
 //MARK: - Series
 struct Series: Codable, Identifiable {
     let id: Int
-    let name, description: String
+    let title: String
     let thumbnail: Thumbnail
 }
 

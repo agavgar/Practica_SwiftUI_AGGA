@@ -39,5 +39,5 @@ struct SeriesCellView: View {
 }
 
 #Preview {
-    SeriesCellView(serie: Series(id: 1, name: "Spider-Verse Chronicles", description: "Explore the multiple dimensions of the Spider-Verse, where different versions of Spider-Men and Spider-Women battle against unique villains.", thumbnail: Thumbnail(path: "https://example.com/spiderverse")))
+    SeriesCellView(serie: Series(id: 1, title: "Spider-Verse Chronicles", thumbnail: Thumbnail(path: "https://example.com/spiderverse")))
 }

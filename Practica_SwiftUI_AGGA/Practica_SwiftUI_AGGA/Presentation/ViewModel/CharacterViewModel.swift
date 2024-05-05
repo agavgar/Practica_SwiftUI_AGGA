@@ -26,7 +26,6 @@ final class CharacterViewModel: CharacterViewModelProtocol {
     
     init(repo: CharacterRepositoryProtocol = CharacterRepository(Network: CharacterNetwork())) {
         self.repo = repo
-        loadCharacters()
     }
     
     func getCharacter() async {

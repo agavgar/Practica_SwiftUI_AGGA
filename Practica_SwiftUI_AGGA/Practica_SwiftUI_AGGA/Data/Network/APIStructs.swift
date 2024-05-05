@@ -20,9 +20,9 @@ enum EndpointsMarvel: String {
     case url = "https://gateway.marvel.com"
     case characters = "/v1/public/characters"
     case EndSerie = "/series"
-    case apiKey = "?apikey=17bf6269b1c110b54464c4975cd7846b"
+    case apiKey = "?apikey=f807897efc1c14631fa63ca95be6d339"
     case timestamp = "&ts=7"
-    case hash = "&hash=ecbf164af55a73b4bbf6559943f231db"
+    case hash = "&hash=bf3a96859b41804bd73135d340014e14"
 }
 
 struct HTTPResponseCodes{
