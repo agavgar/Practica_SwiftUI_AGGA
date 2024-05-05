@@ -11,47 +11,45 @@ struct Home: View {
     @EnvironmentObject var viewModel: CharacterViewModel
     
     var body: some View {
-        #if os(watchOS)
         NavigationStack {
-            List{
-                ForEach(viewModel.characters) { character in
-                    NavigationLink {
-                        //Añadir la vista detalle
-                        DetailView(viewModel: viewModel, character: character)
-                    } label: {
-                        CharacterCellView(character: character)
-                            .frame(width: 175, height: 175)
+            if viewModel.isLoading {
+                ProgressView()
+            }else{
+                ScrollView(.vertical){
+                    VStack{
+                        ForEach(viewModel.characters) { character in
+                            NavigationLink {
+                                //Añadir la vista detalle
+                                DetailView(character: character)
+                            } label: {
+                                CharacterCellView(character: character)
+                                #if os(watchOS)
+                                    .frame(width: 150, height: 250)
+                                #endif
+                                Spacer()
+                            }
+                        }
                     }
                 }
-            }
-        }
-        #else
-        NavigationStack {
-            List{
-                ForEach(viewModel.characters) { character in
-                    NavigationLink {
-                        //Añadir la vista detalle
-                        DetailView(viewModel: viewModel, character: character)
-                    } label: {
-                        CharacterCellView(character: character)
+                .background(.clear)
+                .padding()
+                .navigationTitle("Characters")
+                #if os(iOS)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Image("Logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 35)
                     }
                 }
+                #endif
+                .navigationBarTitleDisplayMode(.automatic)
             }
-            .onAppear{
-                viewModel.loadCharacters()
-            }
-            .navigationTitle("Characters")
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Image("Logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 35)
-                }
-            }
-            .navigationBarTitleDisplayMode(.automatic)
         }
-        #endif
+        .onAppear{
+            viewModel.loadCharacters()
+        }
     }
 }
 

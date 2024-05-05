@@ -12,54 +12,35 @@ struct SeriesDetailView: View {
     
     var body: some View {
         NavigationStack {
-    #if os(watchOS)
-    ZStack{
-        AsyncImage(url: URL(string: "\(serie.thumbnail.path)")) { image in
-            image.resizable()
-                .scaledToFill()
-                .frame(width: 150,height: 300)
-                
-        } placeholder: {
-            Image("Placeholder")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 150,height: 300)
-        }
-        Rectangle()
-            .fill(Color.red)
-            .frame(width: 300, height: 50)
-            .offset(y:100)
-        Text(serie.title)
-            .font(.caption2)
-            .foregroundStyle(.white)
-            .backgroundStyle(.clear)
-            .bold()
-            .frame(width: 500, height: 25)
-            .offset(y:90)
-    }
-            
-    #else
             ZStack{
-                AsyncImage(url: URL(string: "\(serie.thumbnail.path)")) { image in
+                AsyncImage(url: URL(string: "\(serie.thumbnail.path)/portrait_incredible.jpg")) { image in
                     image.resizable()
                         .scaledToFill()
+                        .clipped()
                 } placeholder: {
                     Image("Placeholder")
                         .resizable()
                         .scaledToFill()
+                        .clipped()
                 }
-                .navigationTitle("\(serie.title)")
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Image("Logo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 35)
-                    }
+                #if os(watchOS)
+                .frame(height: 200)
+                #else
+                .frame(height: 350)
+                #endif
+            }
+            .navigationTitle("\(serie.title)")
+            #if os(iOS)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("Logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 35)
                 }
             }
+            #endif
             .navigationBarTitleDisplayMode(.automatic)
-        #endif
         }
     }
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import Combine
 
 protocol CharacterViewModelProtocol {
     var repo: CharacterRepositoryProtocol { get set }
@@ -17,10 +16,11 @@ protocol CharacterViewModelProtocol {
     func loadSeries(id: Int)
 }
 
-final class CharacterViewModel: CharacterViewModelProtocol {
+final class CharacterViewModel: CharacterViewModelProtocol, ObservableObject {
     
     @Published var characters = [Character]()
     @Published var series = [Series]()
+    @Published var isLoading = false
     
     var repo: CharacterRepositoryProtocol
     
@@ -40,8 +40,14 @@ final class CharacterViewModel: CharacterViewModelProtocol {
     }
     
     func loadCharacters(){
+        isLoading = true
+        print("cargando")
         Task{
             await getCharacter()
+            DispatchQueue.main.async {
+                self.isLoading = false
+                print("dejo cargar")
+            }
         }
     }
     
@@ -56,12 +62,16 @@ final class CharacterViewModel: CharacterViewModelProtocol {
     }
     
     func loadSeries(id: Int) {
+        isLoading = true
+        //print("cargando")
         Task{
             await getSeries(id:id)
+            DispatchQueue.main.async {
+                self.isLoading = false
+                //print("dejo cargar")
+            }
         }
     }
     
     
 }
-
-extension CharacterViewModel: ObservableObject {}

@@ -12,62 +12,82 @@ struct CharacterCellView: View {
     
     var body: some View {
         #if os(watchOS)
+        ZStack{
+            AsyncImage(url: URL(string: "\(character.thumbnail.path)/portrait_small.jpg")) { image in
+                image.resizable()
+                    .scaledToFill()
+                    .frame(width: 200,height: 200)
+                
+            } placeholder: {
+                Image("Placeholder")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 200,height: 200)
+            }
+            Rectangle()
+                .fill(Color.red)
+                .frame(width: 300, height: 50)
+                .offset(y:100)
+            Text(character.name)
+                .font(.title3)
+                .foregroundStyle(.white)
+                .backgroundStyle(.clear)
+                .bold()
+                .frame(width: 500, height: 25)
+                .offset(y:90)
+        }
+        #else
+        ZStack{
+            AsyncImage(url: URL(string: "\(character.thumbnail.path)/landscape_xlarge.jpg")) { image in
+                image.resizable()
+                    .scaledToFill()
+                #if os(watchOS)
+                    .frame(width: 20,height: 20)
+                #else
+                    .frame(width: 350, height: 250)
+                #endif
+                
+            } placeholder: {
+                Image("Placeholder")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 350, height: 250)
+            }
+            #if os(watchOS)
+            Rectangle()
+                .fill(Color.red)
+                .frame(width: 300, height: 50)
+                .offset(y:100)
+            Text(character.name)
+                .font(.title3)
+                .foregroundStyle(.white)
+                .backgroundStyle(.clear)
+                .bold()
+                .frame(width: 500, height: 25)
+                .offset(y:90)
+            #else
             ZStack{
-                AsyncImage(url: URL(string: "\(character.thumbnail.path)/portrait_small.jpg")) { image in
-                    image.resizable()
-                        .scaledToFill()
-                        .frame(width: 150,height: 300)
-                        
-                } placeholder: {
-                    Image("Placeholder")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 150,height: 300)
-                }
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(width: 300, height: 50)
-                    .offset(y:100)
+                BlurView(style: .dark)
+                    .frame(height: 25)
                 Text(character.name)
                     .font(.title3)
-                    .foregroundStyle(.white)
-                    .backgroundStyle(.clear)
+                    .foregroundStyle(.red)
                     .bold()
-                    .frame(width: 500, height: 25)
-                    .offset(y:90)
             }
+            .offset(y:125)
+            #endif
+        }
+        #if os(watchOS)
+        .frame(width: 50,height: 50)
         #else
-        VStack{
-                AsyncImage(url: URL(string: "\(character.thumbnail.path)/landscape_xlarge.jpg")) { image in
-                    image.resizable()
-                        .frame(width: 350, height: 250)
-                        .scaledToFill()
-                    
-                } placeholder: {
-                    Image("Placeholder")
-                        .resizable()
-                        .scaledToFit()
-                        .offset(x: 20,y:100)
-                        .frame(width: 350, height: 250)
-                }
-                ZStack{
-                    BlurView(style: .dark)
-                        .frame(width: 500, height: 25)
-                    Text(character.name)
-                        .font(.title3)
-                        .foregroundStyle(.red)
-                        .bold()
-                }
-                .offset(y:-8)
-                .onAppear{
-                    //print("\(character.thumbnail.path)/portrait_uncanny.jpg")
-                }
-            }
+        .frame(width: 350, height: 250)
+        #endif
+        .padding()
+        .clipped()
         #endif
     }
 }
 
 #Preview {
-    CharacterCellView(character: Character(id: 1, name: "Spiderman", description: "Antes de ser mordido por una araña radioactiva y convertirse en Spider-Man,Peter Parker era un chico normal de la escuela.Era tímido y,a menudo,acosado en la escuela y no sabía como defenderse. Tan pronto como obtuvo sus poderes ganó más confianza en sí mismo y,a veces,hacía bromas,incluso en situaciones peligrosas,siendo particularmente conocido por burlarse de sus enemigos.Cuando su tío murió,Peter decidió ser más responsables por el bien de los demás y aparenta ser duro,pero en realidad es muy compasivo.", thumbnail: Thumbnail(path: "https://ultimatespiderman.fandom.com/es/wiki/Spider-Man?file=Spider-Man.")))
-        .previewLayout(.fixed(width: 400.0, height: 200.0))
+    CharacterCellView(character: Character(id: 1, name: "Spiderman", description: "Antes de ser mordido por una araña radioactiva y convertirse en Spider-Man,Peter Parker era un chico normal de la escuela.Era tímido y,a menudo,acosado en la escuela y no sabía como defenderse. Tan pronto como obtuvo sus poderes ganó más confianza en sí mismo y,a veces,hacía bromas,incluso en situaciones peligrosas,siendo particularmente conocido por burlarse de sus enemigos.Cuando su tío murió,Peter decidió ser más responsables por el bien de los demás y aparenta ser duro,pero en realidad es muy compasivo.", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16")))
 }
