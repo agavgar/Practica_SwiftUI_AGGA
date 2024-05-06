@@ -17,11 +17,13 @@ struct SeriesDetailView: View {
                     image.resizable()
                         .scaledToFill()
                         .clipped()
+                        .id(18)
                 } placeholder: {
                     Image("Placeholder")
                         .resizable()
                         .scaledToFill()
                         .clipped()
+                        .id(17)
                 }
                 #if os(watchOS)
                 .frame(height: 200)
@@ -37,6 +39,7 @@ struct SeriesDetailView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(height: 35)
+                        .id(19)
                 }
             }
             #endif

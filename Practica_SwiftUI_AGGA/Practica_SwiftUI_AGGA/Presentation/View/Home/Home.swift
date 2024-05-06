@@ -16,7 +16,7 @@ struct Home: View {
                 ProgressView()
             }else{
                 ScrollView(.vertical){
-                    VStack{
+                    VStack(spacing: 20){
                         ForEach(viewModel.characters) { character in
                             NavigationLink {
                                 //Añadir la vista detalle
@@ -29,6 +29,7 @@ struct Home: View {
                                 Spacer()
                             }
                         }
+                        .id(4)
                     }
                 }
                 .background(.clear)
@@ -41,6 +42,7 @@ struct Home: View {
                             .resizable()
                             .scaledToFit()
                             .frame(height: 35)
+                            .id(5)
                     }
                 }
                 #endif

@@ -11,38 +11,12 @@ struct CharacterCellView: View {
     let character: Character
     
     var body: some View {
-        #if os(watchOS)
-        ZStack{
-            AsyncImage(url: URL(string: "\(character.thumbnail.path)/portrait_small.jpg")) { image in
-                image.resizable()
-                    .scaledToFill()
-                    .frame(width: 200,height: 200)
-                
-            } placeholder: {
-                Image("Placeholder")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 200,height: 200)
-            }
-            Rectangle()
-                .fill(Color.red)
-                .frame(width: 300, height: 50)
-                .offset(y:100)
-            Text(character.name)
-                .font(.title3)
-                .foregroundStyle(.white)
-                .backgroundStyle(.clear)
-                .bold()
-                .frame(width: 500, height: 25)
-                .offset(y:90)
-        }
-        #else
         ZStack{
             AsyncImage(url: URL(string: "\(character.thumbnail.path)/landscape_xlarge.jpg")) { image in
                 image.resizable()
                     .scaledToFill()
                 #if os(watchOS)
-                    .frame(width: 20,height: 20)
+                    .frame(width: 200,height: 200)
                 #else
                     .frame(width: 350, height: 250)
                 #endif
@@ -52,7 +26,7 @@ struct CharacterCellView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 350, height: 250)
-            }
+            }.id(1)
             #if os(watchOS)
             Rectangle()
                 .fill(Color.red)
@@ -65,6 +39,7 @@ struct CharacterCellView: View {
                 .bold()
                 .frame(width: 500, height: 25)
                 .offset(y:90)
+                .id(2)
             #else
             ZStack{
                 BlurView(style: .dark)
@@ -73,18 +48,18 @@ struct CharacterCellView: View {
                     .font(.title3)
                     .foregroundStyle(.red)
                     .bold()
+                    .id(3)
             }
             .offset(y:125)
             #endif
         }
         #if os(watchOS)
-        .frame(width: 50,height: 50)
+        .frame(width: 350,height: 350)
         #else
         .frame(width: 350, height: 250)
         #endif
         .padding()
         .clipped()
-        #endif
     }
 }
 

@@ -23,11 +23,13 @@ struct DetailView: View {
                         image.resizable()
                             .scaledToFill()
                             .clipped()
+                            .id(6)
                     } placeholder: {
                         Image("Placeholder")
                             .resizable()
                             .scaledToFill()
                             .clipped()
+                            .id(7)
                     }
                     #if os(watchOS)
                     .frame(height: 150)
@@ -49,6 +51,7 @@ struct DetailView: View {
                                 .padding()
                                 .frame(width: 200, height: 50)
                                 .offset(y: 120)
+                                .id(8)
                         }else{
                             Text("No description")
                                 .font(.body)
@@ -56,6 +59,7 @@ struct DetailView: View {
                                 .padding()
                                 .frame(width: 200, height: 80)
                                 .offset(y: 160)
+                                .id(9)
                         }
                     }
                     #else
@@ -66,6 +70,7 @@ struct DetailView: View {
                         .foregroundColor(.red.opacity(0.55))
                         .frame(height: 220)
                         .offset(y: 180)
+                        .id(10)
                     
                     
                     if character.description.count != 0 {
@@ -75,6 +80,7 @@ struct DetailView: View {
                             .padding()
                             .frame(height: 350)
                             .offset(y: 160)
+                            .id(11)
                     }else{
                         Text("No description")
                             .font(.body)
@@ -82,6 +88,7 @@ struct DetailView: View {
                             .padding()
                             .frame(height: 350)
                             .offset(y: 160)
+                            .id(12)
                     }
                     #endif
                     
@@ -96,7 +103,7 @@ struct DetailView: View {
                 Spacer()
                 
                 if viewModel.isLoading{
-                    ProgressView()
+                    ProgressView().id(13)
                 }else{
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 20) {
@@ -108,12 +115,13 @@ struct DetailView: View {
                                     AsyncImage(url: URL(string: "\(serie.thumbnail.path)/portrait_medium.jpg")) { image in
                                         image.resizable()
                                             .scaledToFit()
+                                            .id(15)
                                     } placeholder: {
                                         ProgressView()
                                     }
                                     .frame(width: 90 ,height: 125)
                                 }
-                            }
+                            }.id(14)
                         }
                     }
                     .padding(.horizontal)
@@ -127,6 +135,7 @@ struct DetailView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(height: 35)
+                        .id(16)
                 }
             }
             #endif
