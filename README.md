@@ -2,7 +2,7 @@
 
 **Práctica para el módulo iOS Avanzado de Keepcoding.**
 
-**Resultado: WIP**
+**Resultado: APTO**
 
 ![Simulator Screenshot - iPhone 15 - 2024-05-05 at 20 29](https://github.com/agavgar/Practica_SwiftUI_AGGA/assets/98350985/8c9c3923-bd0b-437e-a15d-aa2428fa7750)
 ![Simulator Screenshot - iPhone 15 - 2024-05-05 at 20 30](https://github.com/agavgar/Practica_SwiftUI_AGGA/assets/98350985/2fabe1af-dd24-4432-b053-05a6b517105a)
